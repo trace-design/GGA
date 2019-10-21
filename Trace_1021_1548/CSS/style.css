@@ -352,20 +352,6 @@ background: url(../image/icon4.png)no-repeat;
   display: block;
   max-width: 100%;
 }
-.grid2 {
-  background: #fff;
-  /* box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4); */
-  float: left;
-  font-size: 12px;
-  margin: 8px;
-  min-height: 100px;
-  padding: 15px;
-  width: 188px;
-  /* transition: top 1s ease, left 1s ease; */
-  overflow:		hidden;
-/* margin:			10px 8px 10px 16px; */
-  position:		relative;	/* 相対位置指定 */
-}
 
 #contact {
     background-image: url(../image/contact-back.jpg);
@@ -464,11 +450,10 @@ background: url(../image/icon4.png)no-repeat;
         width: auto;
         margin: 0 5%;
     }
-    
     .logo {
-        float:none;
+        float: :none;
         margin-top:60px;
-        text-align:main-center;
+        text-align: .main-center;
     }
     .global-nav {
         float: none;
