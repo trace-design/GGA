@@ -464,10 +464,11 @@ background: url(../image/icon4.png)no-repeat;
         width: auto;
         margin: 0 5%;
     }
+    
     .logo {
-        float: :none;
+        float:none;
         margin-top:60px;
-        text-align: .main-center;
+        text-align:main-center;
     }
     .global-nav {
         float: none;
