@@ -7,6 +7,14 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" rel="stylesheet">
     <link href="favicon.ico" rel="shortcut icon">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+window.surveyUrl = 'https://my.surveypal.com/app/form/ext?sid=1427055429&sh=8PdZscfsVxUrc07QVpp52DAXj9qB4857d0_cI_prDpvDbxNM-BvDTscn0Fmb9wuK';
+</script>
+    <script>
+function toggle(e,t){e=document.getElementById(e);e.style.display=t?"block":"none"}function createAnswerId(){var n=(new Date).getTime();return"surveypalid_1427055429".replace(/[x]/g,function(e){var t=(n+16*Math.random())%16|0;return n=Math.floor(n/16),("x"==e?t:3&t|8).toString(16)})}function addIFrame(e){var t='<iframe src="'+window.surveyUrl+"&extid="+e+'" width="342px" height="474px" frameBorder="0"/>',e=document.createElement("div");e.innerHTML=t,document.getElementById("surveyiframe").appendChild(e)}zE("webWidget:on","chat:start",function(e){console.log("chat:start:"+window.answerId),zE("webWidget","chat:addTags",[window.answerId])}),zE("webWidget:on","chat:end",function(e){console.log("chat:end - show survey");var t=document.getElementById("webWidget");t&&"100%"===t.style.width&&document.getElementById("postfeeling").classList.add("fullscreen"),toggle("postfeeling",!0)}),zE("webWidget:on","chat:status",function(e){console.log(e)}),window.addEventListener("DOMContentLoaded",function(e){var t=createAnswerId();addIFrame(window.answerId=t),document.getElementById("sendsurvey").addEventListener("click",function(e){console.log("survey sent"),toggle("postfeeling",!1),zE("webWidget","close")})});
+</script>
+
+
 
 
 </head>
@@ -66,6 +74,17 @@
                         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fkeisuke.kametani&amp;src=sdkpreparse"
                         class="fb-xfbml-parse-ignore">share</a>
                 </div>
+                <style>
+div#postfeeling{z-index:9999999;display:none;background:#1f73b7;position:fixed;border-radius:10px;bottom:16px;right:16px;width:342px;height:541px}div#sendsurvey{height:43px;width:100%;color:#fff;font-size:20px;padding-top:10px;text-align:center;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}div#sendsurvey span.close{position:absolute;right:10px;top:10px;cursor:default}div#postfeeling.fullscreen{top:0;right:0;bottom:auto;right:auto;height:100vh;width:100vw}div#postfeeling.fullscreen div#surveyiframe,div#postfeeling.fullscreen div#surveyiframe iframe{bottom:auto;right:auto;height:calc(100vh - 43px);width:100vw}
+</style>
+
+<div id="postfeeling">
+    <div id="sendsurvey">
+        <span class="label">Give us feedback</span><span class="close">X</span>
+    </div>
+    <div id="surveyiframe"></div>
+</div>
+
 
                 <div class="footer-center">
                     <small>&copy; 2019 TRACE　Co., Ltd.</small>
